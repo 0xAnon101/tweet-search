@@ -81,12 +81,7 @@ router.get('/', function(req, res, next) {
     });
 });
 
-// router.get('/tweets/gettweets', function(req, res, next) {
-//     res.json({
-//         name:"asas",
-//         class:"six"
-//     })
-//  });
+
 
  module.exports.routers = router;
  

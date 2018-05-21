@@ -18,13 +18,15 @@ var jsonParser = bodyParser.json();
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 router.get('/tweets/gettweets', function (req, res, next) {
+
   (0, _index2.default)().then(function (data) {
 
-    console.log(data);
+    // console.log(data);
     fs.readFile("tweets.json", function (err, data) {
       if (err) throw err;
       console.log(JSON.parse(data.toString()));
     });
+    res.json(data);
   });
 
   (0, _index2.default)(function (err, res) {
