@@ -5,7 +5,7 @@
 <h1><i class="fa fa-twitter-square" aria-hidden="true"></i>&nbsp;{{title}}</h1>
 
 
-<form action="/tweets/gettweets" method="POST" id="form">
+<form action="/tweets/gettweets" method="GET" id="form">
     <label for ="input-query">Search hot topics </label><br/>
     <input type="text"  name="query"  id= "input-query" required maxlength="20" autocomplete="off" /><br/>
     <button  type="submit" name="submit"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Search </button>
