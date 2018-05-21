@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "babel" : "babel --presets env ./routes/tweetsearchroute --out-dir  ./routes/compiledtweet"
+    "babel": "babel --presets env ./routes/tweetsearchroute --out-dir  ./routes/compiledtweet"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
