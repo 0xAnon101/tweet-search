@@ -4,9 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expresshbs = require("express-handlebars");
-var indexRouter = require('./routes/compiledtweet/index').routers;
-// var usersRouter = require('./routes/users');
 var expressSession = require("express-session");
+
+var importfile = require('./routes/compiledtweet/import');
+
 
 var app = express();
 
@@ -22,19 +23,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/assets',express.static(path.join(__dirname, '/public/stylesheets')));
 app.use('/images',express.static(path.join(__dirname, '/public/images')));
-app.use(expressSession({
-  secret:"Rr22211133366@", 
-  saveUninitialized : false,
-  resave: false,
-  tls : ( 1 * 160 *160 ),
-  cookie: { path: '/',
-   httpOnly: true, 
-    maxAge: 700000 }
-}));
 
 
-app.use('/', indexRouter);
-// app.use('/users', usersRouter);
+
+app.use('/mainpage', importfile);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -53,3 +45,14 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+// app.use(expressSession({
+//   secret:"Rr22211133366@", 
+//   saveUninitialized : false,
+//   resave: false,
+//   tls : ( 1 * 160 *160 ),
+//   cookie: { path: '/',
+//    httpOnly: true, 
+//     maxAge: 700000 }
+// }));
