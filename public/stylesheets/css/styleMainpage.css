@@ -1,0 +1,89 @@
+html, body {
+  width: 100%;
+  min-height: 650px;
+  background-color: #fff;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Comfortaa', cursive;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative; }
+
+body {
+  font-family: 'Times New Roman', Times, serif; }
+  body .container {
+    background: url("/images/c.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding-top: 1px;
+    z-index: 1; }
+    body .container::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(121, 75, 196, 0.516);
+      padding-top: 1px;
+      z-index: -2; }
+
+.innercontainer {
+  width: 800px;
+  min-height: 300px;
+  background-color: #794BC4;
+  color: #fff;
+  margin: 200px auto;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-top-right-radius: 60%;
+  border-bottom-left-radius: 60%;
+  border-left: 7px solid #dad8d8;
+  border-right: 3px solid #dad8d8;
+  box-sizing: border-box; }
+  .innercontainer h1 {
+    padding-top: 20px;
+    font-family: 'Permanent Marker', cursive; }
+  .innercontainer #form {
+    color: #fff; }
+    .innercontainer #form label {
+      font-family: 'Audiowide', cursive; }
+
+input[type="text"] {
+  margin-top: 4px;
+  background-color: #7345C0;
+  border: none;
+  border-bottom: 1px solid #7b23df;
+  padding: 5px;
+  outline: none;
+  width: 250px;
+  height: 50px;
+  transition: width 0.5s ease;
+  position: relative; }
+
+button {
+  margin-top: 20px;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 18px 10px 18px;
+  font-family: 'Audiowide', cursive;
+  background-color: #0eb85a;
+  box-shadow: 2px 4px 14px -4px #26312c;
+  font-size: 15px;
+  position: relative;
+  border-radius: 5px; }
+  button:active {
+    background-color: #088340;
+    top: 1px; }
+
+label {
+  padding: 3px;
+  display: block; }
+
+input:focus {
+  background: #6434B5;
+  color: #d5d5d5;
+  width: 250px;
+  border-bottom: 1px solid #8054ca; }
