@@ -2,9 +2,14 @@
 
 
 <h1><i class="fa fa-twitter-square" aria-hidden="true"></i>&nbsp;{{title}}</h1>
+<h2><i class="fa fa-podcast" aria-hidden="true"></i>&nbsp;{{labelhead}}</h2>
 
     <div class="list-tweets">
-        {{!-- list is inseterd here --}}
+
+        {{#each feed}}
+             <p>{{@key}}. {{this}}</p>
+        {{/each}}
+
     </div>
 
 
