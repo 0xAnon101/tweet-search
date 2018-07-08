@@ -4,9 +4,10 @@ var https = require("https");
 var fs =  require('fs');
 var expressSession = require("express-session");
 const key = require('../twitterkey.json');
-var OAuth2 = require('OAuth').OAuth2;
+var OAuth = require('oauth');
 var bodyParser =  require('body-parser');
 
+var OAuth2 = OAuth.OAuth2;  
 // create application/json parser
 var jsonParser = bodyParser.json()
 
