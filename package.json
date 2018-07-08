@@ -2,9 +2,13 @@
   "name": "tweets",
   "version": "0.0.0",
   "private": true,
+  "engine": {
+    "node": "10.3.0",
+    "npm": "6.0.1"
+  },
   "scripts": {
     "start": "node ./bin/www",
-    "convert" :"node-sass -w ./public/stylesheets/scss/ -o ./public/stylesheets/css/",
+    "convert": "node-sass -w ./public/stylesheets/scss/ -o ./public/stylesheets/css/",
     "babel": "babel --presets env ./routes/tweetsearchroute --out-dir  ./routes/compiledtweet"
   },
   "dependencies": {
