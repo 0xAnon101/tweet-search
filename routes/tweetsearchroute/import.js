@@ -1,4 +1,4 @@
-import hello from './index';
+var  hello =  require('./index').hello;
 var bodyParser = require('body-parser');
 var express = require('express');
 var router = express.Router();
@@ -28,7 +28,8 @@ router.get('/tweets/gettweets', function(req, res, next) {
             data = JSON.parse(data);
 
             function populate(data) {
-                let obj = obj || {};
+                let obj =  {};
+                console.log(obj);
                 let i = 0;
                 for (var desc of data) {
                     obj[i] = desc.text;

@@ -13,7 +13,7 @@ var jsonParser = bodyParser.json()
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-export default function(searching,callback) {
+var hello=  function(searching,callback) {
 
     console.log("searching ::::::::::::::::::::::::::::::::::::" +searching)
         return new Promise(function(resolve,reject) {
@@ -82,4 +82,4 @@ router.get('/', function(req, res, next) {
 
 
  module.exports.routers = router;
- 
+ module.exports.hello = hello;

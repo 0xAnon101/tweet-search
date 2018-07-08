@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "convert": "node-sass -w ./public/stylesheets/scss/ -o ./public/stylesheets/css/",
-    "babel": "babel --presets env ./routes/tweetsearchroute --out-dir  ./routes/compiledtweet"
+    "convert": "node-sass -w ./public/stylesheets/scss/ -o ./public/stylesheets/css/"
+    
   },
   "dependencies": {
     "body-parser": "^1.18.3",
