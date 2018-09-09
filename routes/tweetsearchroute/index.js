@@ -30,9 +30,10 @@ export default function(searching,callback) {
         
             function setrequest(accesstoken) {
                 console.log("searching :::::::::::::" + searching);
+                const uri = encodeURIComponent('/1.1/search/tweets.json?q='+searching+'&result_type=popular');
                 var options = {
                     hostname: 'api.twitter.com',
-                    path: '/1.1/search/tweets.json?q='+searching+'&result_type=popular',
+                    path: uri,
                     headers: {
                         Authorization: 'Bearer ' + accesstoken
                     }
