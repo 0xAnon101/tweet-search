@@ -22,7 +22,7 @@ router.get('/tweets/gettweets', function(req, res, next) {
         console.log(res);
 
     }).then((data) => {
-
+        console.log('========================================================================>');
         fs.readFile(__dirname + "/tweets.json", "utf-8", (err, data) => {
             if (err) throw err;
             data = JSON.parse(data);

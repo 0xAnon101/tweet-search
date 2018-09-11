@@ -33,7 +33,7 @@ var hello=  function(searching,callback) {
                 console.log("searching :::::::::::::" + searching);
                 var options = {
                     hostname: 'api.twitter.com',
-                    path: '/1.1/search/tweets.json?q='+searching+'&result_type=popular',
+                    path: '/1.1/search/tweets.json?q='+encodeURI(searching)+'&result_type=popular',
                     headers: {
                         Authorization: 'Bearer ' + accesstoken
                     }
