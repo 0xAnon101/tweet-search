@@ -31,6 +31,7 @@ var hello=  function(searching,callback) {
         
             function setrequest(accesstoken) {
                 console.log("searching :::::::::::::" + searching);
+                const uri = encodeURIComponent('/1.1/search/tweets.json?q='+searching+'&result_type=popular');
                 var options = {
                     hostname: 'api.twitter.com',
                     path: '/1.1/search/tweets.json?q='+encodeURI(searching)+'&result_type=popular',
@@ -83,4 +84,8 @@ router.get('/', function(req, res, next) {
 
 
  module.exports.routers = router;
+<<<<<<< HEAD
  module.exports.hello = hello;
+=======
+ 
+>>>>>>> 2a72e225e86ecb80b73c5b156ab026ec91ec7c21
