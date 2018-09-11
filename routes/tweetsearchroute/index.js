@@ -84,8 +84,4 @@ router.get('/', function(req, res, next) {
 
 
  module.exports.routers = router;
-<<<<<<< HEAD
  module.exports.hello = hello;
-=======
- 
->>>>>>> 2a72e225e86ecb80b73c5b156ab026ec91ec7c21
